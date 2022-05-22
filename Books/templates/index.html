@@ -1,2 +1,22 @@
+<style>
+	tr, td, th{
+		border: 1px solid black;
+	}
+	table{ 
+		border-collapse: collapse;
+	}
+</style>
 <h1>Hello World!</h1>
 <h2>Books</h2>
+
+<ul>
+	{% for book in books %}
+		<li>{{ book.title }}</li>
+	{% endfor %}
+</ul>
+
+{{Date}}
+
+<div>
+	{{ form.as_p }}
+</div>
