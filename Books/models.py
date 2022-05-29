@@ -21,6 +21,9 @@ class Publication(models.Model):
 	city = models.CharField(max_length=50)
 	country = models.CharField(max_length=10)
 
+	def __str__(self):
+		return self.name
+
 
 class Book(models.Model):
 	title = models.CharField(max_length=50)	
@@ -31,6 +34,8 @@ class Book(models.Model):
 	author = models.ForeignKey(Author, on_delete=models.CASCADE)
 	publication = models.ForeignKey(Publication, on_delete=models.CASCADE)
 
+	def __str__(self):
+		return self.title
 
 class PublicationAuthor(models.Model):
 	author = models.ForeignKey(Author, on_delete=models.CASCADE)
