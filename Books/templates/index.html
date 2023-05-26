@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h1>Hello World!</h1>
+<h2>Books</h2>
+    <div id="cards">
+	{% for book in books %}
+		<div class="card" style="width: 18rem;">
+  		<img src="{{MEDIA_URL}}{{book.cover_image.url}}" class="card-img-top" alt="...">
+  		<div class="card-body">
+    		<h5 class="card-title">{{book.title}}</h5>
+    		<p class="card-text">{{book.content}}</p>
+    		<a href="#" class="btn btn-primary">Go somewhere</a>
+  		</div>
+		</div>
+	{% endfor %}
+</div>
+    {{ Date }}
+{% endblock %}
+

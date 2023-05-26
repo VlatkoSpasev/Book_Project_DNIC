@@ -9,6 +9,9 @@ class Author(models.Model):
 	country = models.CharField(max_length=50)
 	biography = models.TextField(null=True, blank=True)
 
+	class Meta:
+		ordering = ("last_name", "first_name", "year_of_birth")
+
 	def __str__(self):
 		return self.first_name+" "+self.last_name
 

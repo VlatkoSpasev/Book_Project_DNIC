@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+{% block content %}
+{#    <form action="/authors/add/" method="post">#}
+{#    {% csrf_token %}#}
+{#    <label for="first_name">First name: </label>#}
+{#    <input id="first_name" type="text" name="first_name" value="{{ first_name }}">#}
+{#    <label for="last_name">Last name: </label>#}
+{#    <input id="last_name" type="text" name="last_name" value="{{ last_name }}">#}
+{#    <label for="year_of_birth">Year of birth: </label>#}
+{#    <input id="year_of_birth" type="number" name="year_of_birth" value="{{ year_of_birth }}">#}
+{#    <label for="country">Country: </label>#}
+{#    <input id="country" type="text" name="country" value="{{ country }}">#}
+{#    <label for="biography">Biography: </label>#}
+{#    <input id="biography" type="text" name="biography" value="{{ biography }}">#}
+{#    <input type="submit" value="OK">#}
+{#</form>#}
+<form action="{% url 'add_author' %}" method="post" class="col-4">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
